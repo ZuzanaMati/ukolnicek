@@ -1,4 +1,4 @@
-import {Task} from "./Task/index.js"
+import { Task } from "./Task/index.js"
 
 let renderTasks = (tasks) => {
     let seznamUkolu = document.querySelector(".todo__tasks")
@@ -14,24 +14,14 @@ fetch("https://apps.kodim.cz/daweb/trening-api/apis/tasks-api/tasks")
         renderTasks(data)
     })
 
-
-let checkboxUndone = document.querySelector("#checkbox-undone")
-console.log(checkboxUndone.checked)
-
-checkboxUndone.addEventListener("click", () => {
-    if (checkboxUndone.checked) {
-        fetch("https://apps.kodim.cz/daweb/trening-api/apis/tasks-api//tasks?done=false")
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data)
-            renderTasks(data)
-        })
-        } else {
-            fetch("https://apps.kodim.cz/daweb/trening-api/apis/tasks-api/tasks")
-    .then((response) => response.json())
-    .then((data) => {
-        console.log(data)
-        renderTasks(data)
+    let checkboxUndone = document.querySelector("#checkbox-undone")
+    console.log(checkboxUndone.checked)
+    
+    checkboxUndone.addEventListener("click", () => {
+            fetch(`https://apps.kodim.cz/daweb/trening-api/apis/tasks-api/tasks${checkboxUndone.checked ? "?done=false" : ""}`)
+                .then((response) => response.json())
+                .then((data) => {
+                    console.log(data)
+                    renderTasks(data)
+                })
     })
-        }
-})
