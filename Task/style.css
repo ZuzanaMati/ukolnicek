@@ -1,0 +1,18 @@
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5rem 2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .task__due {
+    margin-top: 0.25rem;
+    color: #777;
+    font-size: 0.8rem;
+  }
+
+  .task__done {
+    font-size: 150%;
+    font-weight: bold;
+  }
