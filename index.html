@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+
+  <script type="module" src="index.js"></script>
+
+  <title>Úkolníček</title>
+</head>
+
+<body>
+  <div class="todo">
+    <div class="todo__header">
+      <div class="date">
+        <div class="date__daynum">12</div>
+        <div class="date__monthyear">
+          <div class="date__month">dub</div>
+          <div class="date__year">2020</div>
+        </div>
+        <div class="date__day">čtvrtek</div>
+      </div>
+    </div>
+    <div class="todo__new">
+      <button class="btn-add">+</button>
+      <input id="new-task" class="new-task" type="text" />
+    </div>
+    <div class="todo__filter">
+      <label><input id="checkbox-undone" type="checkbox">&nbsp;Pouze nesplněné</label>
+    </div>
+    <div class="todo__tasks">
+      <div class="task">
+        <div class="task__body">
+          <div class="task__name">Vyprat ponožky</div>
+          <div class="task__due">za 2 hodiny</div>
+        </div>
+        <div class="task__done">✓</div>
+      </div>
+      <div class="task">
+        <div class="task__body">
+          <div class="task__name">Udělat domácí úkol do JS2</div>
+          <div class="task__due">za 2 dny</div>
+        </div>
+        <div class="task__done"></div>
+      </div>
+      <div class="task">
+        <div class="task__body">
+          <div class="task__name">Jít do posilovny</div>
+          <div class="task__due">dnes večer</div>
+        </div>
+        <div class="task__done">✓</div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
